@@ -1,5 +1,3 @@
-import co.uk.hexeption.draco.utils.ClientUtils;
-
 import java.lang.reflect.InvocationTargetException;
 
 /**
@@ -60,7 +58,7 @@ public abstract class Event {
 
     private static final void call(final Event event) {
 
-        final ClientUtils.ArrayHelper<Data> dataList = EventManager.get(event.getClass());
+        final ArrayHelper<Data> dataList = EventManager.get(event.getClass());
 
         if (dataList != null) {
             for (final Data data : dataList) {
